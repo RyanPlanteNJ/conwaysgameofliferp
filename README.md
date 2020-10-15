@@ -1,1 +1,1 @@
-# conwaysgameofliferp
+# Conway's "Game of Life"

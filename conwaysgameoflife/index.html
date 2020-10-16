@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Conway's Game of Life</title>
+<link rel="stylesheet" type="text/css" href="./src/index.css">
+</head>
+
+<body>
+  <h1>Conway's Game of Life</h1>
+  <p id='counter'>Gen: 0</p>
+  <table id="canvas" style = 'background: black'>
+  </table>
+  <script src = './src/shapes/shapes.js'></script>
+  <script src = './src/index.js'></script>
+  <script src = './src/buttons/buttonfunc.js'></script>
+  <div class='main'>
+    <button id='play' onclick="play()">PLAY</button>
+    <button id='next' onclick="next()">NEXT</button>
+    <button onclick="clearBoard()">CLEAR</button>
+    <button id ='random' onclick="random()">RANDOMIZE</button>
+  </div>
+
+  <div class = 'secondary'>
+    <p id = 'speedTracker'>SPEED: 150ms</p>
+    <p>
+      To adjust the speed, pause the simulation first, and then adjust to the speed you desire
+    </p>
+    <div class='control-box'>
+      <button onclick='decrease()'>DECREASE SPEED <<<</button>
+      <button onclick='increase()'>INCREASE SPEED >>></button>
+    </div>
+    <div class = 'control-box'>
+      <h2>SHAPES</h2>
+      <button class = 'other-button' onclick="centerStart()">CENTER</button>
+      <button onclick='beacon()'>BEACON</button>
+      <button onclick='blinker()'>BLINKER</button>
+      <button onclick='hammerhead()'>HAMMER HEAD</button>
+    </div>
+    <div class = 'control-box'>
+      <p id = 'xwidth'>
+        WIDTH: 50
+      </p>
+      <button onclick="increment('x',-10)">DECREASE WIDTH <<<</button>
+      <button onclick="increment('x',10)">INCREASE WIDTH >>></button>
+    </div>
+    <div class = 'control-box'>
+      <p id = 'yheight'>
+        HEIGHT: 50
+      </p>
+      <button onclick="increment('y',-10)">DECREASE HEIGHT <<<</button>
+      <button onclick="increment('y',10)">INCREASE HEIGHT >>></button>
+    </div>
+  </div>
+  <h2>RULES:</h2>
+  <p>If the cell is alive and has 2 or 3 neighbors, then it remains
+    alive. Otherwide, it dies.</p>
+  <p>If the cell is dead and has exactly 3 neighbors, then it comes to
+    life. Otherwide, it remains dead.</p>
+
+</body>
+
+
+</html>

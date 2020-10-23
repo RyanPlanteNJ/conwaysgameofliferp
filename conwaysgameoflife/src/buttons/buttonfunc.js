@@ -24,7 +24,7 @@ function play(){
         button.innerHTML = 'PAUSE'
         timer = setInterval(()=>{sim()},speed)
     }else{
-        clearInterval(timer)
+        clearInterval(timer, counter)
         button.innerHTML = 'PLAY'
     }
 }
